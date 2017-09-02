@@ -1,7 +1,12 @@
+html,
+body {
+  min-width: 1122px;
+  min-height: 1750px;
+}
+
 body {
   margin: 0;
   padding: 0;
-
   font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -14,13 +19,62 @@ body {
   background-repeat: no-repeat;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header {
+  margin-bottom: 75px;
+}
+
+.inner-page .main-header {
+  margin-bottom: 50px;
+  background-color: #000000;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-page .main-navigation {
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.main-navigation-wrapper {
+  width: 100%;
+  margin-bottom: 60px;
+  background-color: #000000;
+}
+
+.main-navigation-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .inner-page {
   color: #000000;
-
   background-color: #f9f6f3;
   background-image: url("img/pattern-light.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.main-header-logo {
+  order: 2;
+  width: 368px;
+  height: 153px;
+}
+
+.inner-page .main-header-logo {
+  order: 0;
+  width: 111px;
+  height: 24px;
+  padding: 23px 20px;
 }
 
 a {
@@ -54,9 +108,22 @@ a {
   background-color: #000000;
 }
 
-.site-navigation,
-.user-navigation {
+.site-navigation {
+  width: 620px;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.user-navigation {
+  width: 140px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inner-page .user-navigation {
+  margin-left: auto;
 }
 
 .site-navigation a,
@@ -71,12 +138,22 @@ a {
   background-color: #242424;
 }
 
+.features {
+  margin-bottom: 80px;
+}
+
 .features-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .feature-item {
   text-align: center;
+  min-height: 170px;
+  width: 300px;
 }
 
 .feature-item h3 {
@@ -85,8 +162,11 @@ a {
 }
 
 .index-columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+  margin-bottom: 35px;
   color: #000000;
-
   background-color: #f8f5f2;
   background-image: url("img/pattern-light.jpg");
   background-position: 0 0;
@@ -96,6 +176,11 @@ a {
 .index-columns h2 {
   font-size: 30px;
   line-height: 42px;
+
+}
+
+.news {
+  width: 380px;
 }
 
 .news-list {
@@ -106,10 +191,21 @@ a {
   text-transform: none;
 }
 
-.gallery-content {
-  background-color: #cccccc;
-  border: 7px solid #ffffff;
+.gallery {
+  width: 300px;
+}
 
+.gallery-content img {
+  background-color: #cccccc;
+  border: 10px solid #ffffff;
+}
+
+.contacts {
+  width: 380px;
+}
+
+.appointment {
+  width: 300px;
 }
 
 .appointment-item input {
@@ -124,6 +220,9 @@ a {
 }
 
 .page-title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
   font-size: 30px;
   line-height: 42px;
 }
@@ -133,6 +232,9 @@ a {
 }
 
 .breadcrumbs a {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
   color: #000000;
 }
 
@@ -143,6 +245,19 @@ a {
 
 .breadcrumbs-current {
   color: #aba9a7;
+}
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 180px;
+}
+
+.catalog {
+  width: 700px;
 }
 
 .filter fieldset {
@@ -171,12 +286,24 @@ a {
 }
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .catalog-item {
+  width: 220px;
+  margin-bottom: 20px;
+  margin-right: 20px;
   background-color: #f8f8f8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .catalog-item:hover {
@@ -210,13 +337,22 @@ a {
 }
 
 .pagination-list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 .pagination-item a {
   color: #ffffff;
-
   background-color: #000000;
+}
+
+.product-photos {
+  width: 460px;
+}
+
+.product-info {
+  width: 390px;
 }
 
 .pagination-item a:hover,
@@ -273,12 +409,27 @@ a {
 }
 
 .main-footer {
+  padding: 60px 0;
+  margin-top: 65px;
   color: #ffffff;
-
   background-color: #212121;
   background-image: url("../img/pattern-dark.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.inner-page .main-footer {
+  margin-top: 45px;
+}
+
+.main-footer .container {
+  display: flex;
+}
+
+.footer-contacts {
+  width: 320px;
+  margin: 0;
+  margin-right: 80px;
 }
 
 .footer-contacts a {
@@ -292,6 +443,7 @@ a {
 }
 
 .footer-social {
+  width: 145px;
   text-align: center;
 }
 
@@ -304,6 +456,9 @@ a {
 }
 
 .footer-copyright {
+  width: 150px;
+  margin: 0;
+  margin-left: auto;
   text-align: center;
 }
 
